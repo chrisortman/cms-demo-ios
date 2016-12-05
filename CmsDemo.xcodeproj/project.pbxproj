@@ -8,11 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		0FD4F8FA0027F32EAF05D812 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 722BF291C1D514B468EB2BDB /* Images.xcassets */; };
-		5D8222F2D52E15F819E82144 /* libPods-CmsDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 567A6506D88CC53395B50346 /* libPods-CmsDemo.a */; };
 		7381E120F484E00C4CD4894F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8468DFEBBE5EF59597574568 /* Main.storyboard */; };
+		7E24EBF78C1829F9D7B7B2CA /* Pods_UnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 028E29CD3B4FCE410803443A /* Pods_UnitTests.framework */; };
 		8DA2CE0C1DEF45D400C6DB1C /* SurveyListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA2CE0B1DEF45D400C6DB1C /* SurveyListTableViewController.swift */; };
 		8DA2CE111DEF4AFB00C6DB1C /* AddSurveyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA2CE101DEF4AFB00C6DB1C /* AddSurveyTableViewController.swift */; };
+		8DC07F3F1DF35D090062BBAA /* AppDataManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC07F3E1DF35D090062BBAA /* AppDataManagerSpec.swift */; };
+		8DC07F411DF35FC20062BBAA /* CouchDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC07F401DF35FC20062BBAA /* CouchDB.swift */; };
+		8DE8B6691DF1E14800A2DD74 /* EntryPointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE8B6681DF1E14800A2DD74 /* EntryPointViewController.swift */; };
+		8DE8B66C1DF1E74100A2DD74 /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE8B66B1DF1E74100A2DD74 /* WelcomePageViewController.swift */; };
+		8DE8B66E1DF1EB5D00A2DD74 /* WelcomeContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE8B66D1DF1EB5D00A2DD74 /* WelcomeContainerViewController.swift */; };
+		8DE8B6701DF22D5800A2DD74 /* AppInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE8B66F1DF22D5800A2DD74 /* AppInformation.swift */; };
+		8DE8B6721DF27C9D00A2DD74 /* FormattedTextBlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE8B6711DF27C9D00A2DD74 /* FormattedTextBlockViewController.swift */; };
 		B440A63C0ED0FDBB19657B28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40308C65FF6EA2AA0A908B18 /* Foundation.framework */; };
+		B8B038F368B11D0420035036 /* Pods_CmsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2BB4EB455092A8E89CCEF4 /* Pods_CmsDemo.framework */; };
 		D36B2BF469A0BFC2890BFF8E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4F7D940F21F263B15C96FF96 /* Settings.bundle */; };
 		D38B8A5CAFCA25B705190A51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BE1F9CD3F599BED2C78F0F /* AppDelegate.swift */; };
 		D6497AA3331F165BC5DCD6CF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3289B152FE3E1F6209B0A93C /* LaunchScreen.xib */; };
@@ -29,21 +37,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		028E29CD3B4FCE410803443A /* Pods_UnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		02CC0CFBE52B6D2B038F9B35 /* Pods-UnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UnitTests/Pods-UnitTests.release.xcconfig"; sourceTree = "<group>"; };
 		3289B152FE3E1F6209B0A93C /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		40308C65FF6EA2AA0A908B18 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		4069BA83102093BDBE510760 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F7D940F21F263B15C96FF96 /* Settings.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		567A6506D88CC53395B50346 /* libPods-CmsDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CmsDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		722BF291C1D514B468EB2BDB /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8468DFEBBE5EF59597574568 /* Main.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8AE9DD89FB52DC23E606F3CF /* Pods-CmsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CmsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CmsDemo/Pods-CmsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		8DA2CE0B1DEF45D400C6DB1C /* SurveyListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyListTableViewController.swift; sourceTree = "<group>"; };
 		8DA2CE0D1DEF488200C6DB1C /* CmsDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CmsDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		8DA2CE101DEF4AFB00C6DB1C /* AddSurveyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSurveyTableViewController.swift; sourceTree = "<group>"; };
+		8DC07F3D1DF35D090062BBAA /* UnitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		8DC07F3E1DF35D090062BBAA /* AppDataManagerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDataManagerSpec.swift; sourceTree = "<group>"; };
+		8DC07F401DF35FC20062BBAA /* CouchDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouchDB.swift; sourceTree = "<group>"; };
+		8DE8B6681DF1E14800A2DD74 /* EntryPointViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryPointViewController.swift; sourceTree = "<group>"; };
+		8DE8B66B1DF1E74100A2DD74 /* WelcomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePageViewController.swift; sourceTree = "<group>"; };
+		8DE8B66D1DF1EB5D00A2DD74 /* WelcomeContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeContainerViewController.swift; sourceTree = "<group>"; };
+		8DE8B66F1DF22D5800A2DD74 /* AppInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInformation.swift; sourceTree = "<group>"; };
+		8DE8B6711DF27C9D00A2DD74 /* FormattedTextBlockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormattedTextBlockViewController.swift; sourceTree = "<group>"; };
 		A1A1883964577AFFBEAAB9FC /* Pods-CmsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CmsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CmsDemo/Pods-CmsDemo.release.xcconfig"; sourceTree = "<group>"; };
 		BA8A4CC0E27BD31BF30CC9B5 /* CmsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CmsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BE1F9CD3F599BED2C78F0F /* AppDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D957E6A842ADE0F911D7DE08 /* Pods-UnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UnitTests/Pods-UnitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E636DC90BDC8B6FCF02A15BF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA2BB4EB455092A8E89CCEF4 /* Pods_CmsDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CmsDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE93AA779FE08FF9F5F13626 /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -53,7 +72,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B440A63C0ED0FDBB19657B28 /* Foundation.framework in Frameworks */,
-				5D8222F2D52E15F819E82144 /* libPods-CmsDemo.a in Frameworks */,
+				B8B038F368B11D0420035036 /* Pods_CmsDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E24EBF78C1829F9D7B7B2CA /* Pods_UnitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +90,7 @@
 		1B48B7B0E762393B09FCDD6D /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				8DC07F401DF35FC20062BBAA /* CouchDB.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -77,6 +98,7 @@
 		56B78E3C69E64BC0BDBADB39 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8DE8B66F1DF22D5800A2DD74 /* AppInformation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -94,6 +116,8 @@
 			children = (
 				A1A1883964577AFFBEAAB9FC /* Pods-CmsDemo.release.xcconfig */,
 				8AE9DD89FB52DC23E606F3CF /* Pods-CmsDemo.debug.xcconfig */,
+				02CC0CFBE52B6D2B038F9B35 /* Pods-UnitTests.release.xcconfig */,
+				D957E6A842ADE0F911D7DE08 /* Pods-UnitTests.debug.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -102,7 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				6B2EC678692AE7A2A4AED30E /* iOS */,
-				567A6506D88CC53395B50346 /* libPods-CmsDemo.a */,
+				FA2BB4EB455092A8E89CCEF4 /* Pods_CmsDemo.framework */,
+				028E29CD3B4FCE410803443A /* Pods_UnitTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -127,6 +152,8 @@
 		6A0D51651F2F117F8EF2FBE2 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				8DC07F3E1DF35D090062BBAA /* AppDataManagerSpec.swift */,
+				8DC07F3D1DF35D090062BBAA /* UnitTests-Bridging-Header.h */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -176,6 +203,23 @@
 			tabWidth = 4;
 			usesTabs = 0;
 		};
+		8D931AA21DF2808B0010458D /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				8DE8B6711DF27C9D00A2DD74 /* FormattedTextBlockViewController.swift */,
+			);
+			name = Generic;
+			sourceTree = "<group>";
+		};
+		8DE8B66A1DF1E6F300A2DD74 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				8DE8B66B1DF1E74100A2DD74 /* WelcomePageViewController.swift */,
+				8DE8B66D1DF1EB5D00A2DD74 /* WelcomeContainerViewController.swift */,
+			);
+			name = Onboarding;
+			sourceTree = "<group>";
+		};
 		940F321D1181B64152CC813D /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,9 +240,12 @@
 		C2AB40872773EA8EC4D1425F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8D931AA21DF2808B0010458D /* Generic */,
+				8DE8B66A1DF1E6F300A2DD74 /* Onboarding */,
 				D6BE1F9CD3F599BED2C78F0F /* AppDelegate.swift */,
 				8DA2CE0B1DEF45D400C6DB1C /* SurveyListTableViewController.swift */,
 				8DA2CE101DEF4AFB00C6DB1C /* AddSurveyTableViewController.swift */,
+				8DE8B6681DF1E14800A2DD74 /* EntryPointViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -273,9 +320,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE5C5FA2E715D899EB3B3720 /* Build configuration list for PBXNativeTarget "UnitTests" */;
 			buildPhases = (
+				F3F318FDDB62406C240D71E0 /* [CP] Check Pods Manifest.lock */,
 				8E3B6EB0D765789B43C06C8E /* Sources */,
 				79EA239DACDBDB7E26622CCE /* Frameworks */,
 				DAF448D4E785C77905E9C3F7 /* Resources */,
+				DFC0427FCA89CB9E35B92CFF /* [CP] Embed Pods Frameworks */,
+				FBB16A602500B712068FE0FE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -295,10 +345,11 @@
 			attributes = {
 				CLASSPREFIX = "";
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = chrisortman;
 				TargetAttributes = {
 					7E129BEC03F8D6DAED7EE6D3 = {
+						DevelopmentTeam = 3P5W46HP4G;
 						LastSwiftMigration = 0810;
 					};
 					D84D0139E1C2296FCB4DE30E = {
@@ -404,6 +455,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CmsDemo/Pods-CmsDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DFC0427FCA89CB9E35B92CFF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UnitTests/Pods-UnitTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EABFFB25E8EEFF31B015FD93 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -419,6 +485,36 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		F3F318FDDB62406C240D71E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FBB16A602500B712068FE0FE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UnitTests/Pods-UnitTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -426,9 +522,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DE8B6701DF22D5800A2DD74 /* AppInformation.swift in Sources */,
+				8DE8B6691DF1E14800A2DD74 /* EntryPointViewController.swift in Sources */,
 				D38B8A5CAFCA25B705190A51 /* AppDelegate.swift in Sources */,
 				8DA2CE0C1DEF45D400C6DB1C /* SurveyListTableViewController.swift in Sources */,
 				8DA2CE111DEF4AFB00C6DB1C /* AddSurveyTableViewController.swift in Sources */,
+				8DC07F411DF35FC20062BBAA /* CouchDB.swift in Sources */,
+				8DE8B66C1DF1E74100A2DD74 /* WelcomePageViewController.swift in Sources */,
+				8DE8B6721DF27C9D00A2DD74 /* FormattedTextBlockViewController.swift in Sources */,
+				8DE8B66E1DF1EB5D00A2DD74 /* WelcomeContainerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +538,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DC07F3F1DF35D090062BBAA /* AppDataManagerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,16 +558,20 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A1A1883964577AFFBEAAB9FC /* Pods-CmsDemo.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 3P5W46HP4G;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "CmsDemo/Resources/Other-Sources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chrisortman.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "CmsDemo/CmsDemo-Bridging-Header.h";
@@ -490,17 +597,21 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -524,7 +635,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				ONLY_ACTIVE_ARCH = YES;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
@@ -533,8 +644,11 @@
 		};
 		85D76797C1341E44B72D5914 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02CC0CFBE52B6D2B038F9B35 /* Pods-UnitTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CmsDemo.app/CmsDemo";
+				CLANG_ENABLE_MODULES = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -543,9 +657,12 @@
 				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "UnitTests/Resources/UnitTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chrisortman.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "UnitTests/Tests/UnitTests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -556,15 +673,19 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8AE9DD89FB52DC23E606F3CF /* Pods-CmsDemo.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 3P5W46HP4G;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "CmsDemo/Resources/Other-Sources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chrisortman.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "CmsDemo/CmsDemo-Bridging-Header.h";
@@ -591,16 +712,20 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
@@ -618,17 +743,21 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		EEAAC5330371A0AC5209A07F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D957E6A842ADE0F911D7DE08 /* Pods-UnitTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CmsDemo.app/CmsDemo";
+				CLANG_ENABLE_MODULES = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -637,9 +766,13 @@
 				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "UnitTests/Resources/UnitTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chrisortman.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "UnitTests/Tests/UnitTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
