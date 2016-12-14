@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0FD4F8FA0027F32EAF05D812 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 722BF291C1D514B468EB2BDB /* Images.xcassets */; };
+		38EFA41B4DEA69E9DE1E7110 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EFA9E15F21586A1548532E /* Models.swift */; };
+		38EFAF2783FFB1A3B274CC7C /* SerializationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EFAF1498409720D6C5ADD9 /* SerializationSpec.swift */; };
 		7381E120F484E00C4CD4894F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8468DFEBBE5EF59597574568 /* Main.storyboard */; };
 		7E24EBF78C1829F9D7B7B2CA /* Pods_UnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 028E29CD3B4FCE410803443A /* Pods_UnitTests.framework */; };
 		8DA2CE0C1DEF45D400C6DB1C /* SurveyListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA2CE0B1DEF45D400C6DB1C /* SurveyListTableViewController.swift */; };
@@ -40,6 +42,8 @@
 		028E29CD3B4FCE410803443A /* Pods_UnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		02CC0CFBE52B6D2B038F9B35 /* Pods-UnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UnitTests/Pods-UnitTests.release.xcconfig"; sourceTree = "<group>"; };
 		3289B152FE3E1F6209B0A93C /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		38EFA9E15F21586A1548532E /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		38EFAF1498409720D6C5ADD9 /* SerializationSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializationSpec.swift; sourceTree = "<group>"; };
 		40308C65FF6EA2AA0A908B18 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		4069BA83102093BDBE510760 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F7D940F21F263B15C96FF96 /* Settings.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -93,6 +97,30 @@
 				8DC07F401DF35FC20062BBAA /* CouchDB.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		38EFA72ACE8469C0C5395D1D /* Fx */ = {
+			isa = PBXGroup;
+			children = (
+				38EFAD59D650043F73A25F23 /* ResearchKit */,
+			);
+			path = Fx;
+			sourceTree = "<group>";
+		};
+		38EFA9DDF4211AAD82F98057 /* Fx */ = {
+			isa = PBXGroup;
+			children = (
+				38EFAF1498409720D6C5ADD9 /* SerializationSpec.swift */,
+			);
+			path = Fx;
+			sourceTree = "<group>";
+		};
+		38EFAD59D650043F73A25F23 /* ResearchKit */ = {
+			isa = PBXGroup;
+			children = (
+				38EFA9E15F21586A1548532E /* Models.swift */,
+			);
+			path = ResearchKit;
 			sourceTree = "<group>";
 		};
 		56B78E3C69E64BC0BDBADB39 /* Models */ = {
@@ -154,6 +182,7 @@
 			children = (
 				8DC07F3E1DF35D090062BBAA /* AppDataManagerSpec.swift */,
 				8DC07F3D1DF35D090062BBAA /* UnitTests-Bridging-Header.h */,
+				38EFA9DDF4211AAD82F98057 /* Fx */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -177,6 +206,7 @@
 				EC65EF186F8F8D0C596ADB8F /* Views */,
 				C6541E001AEE2D03AA037EE8 /* Resources */,
 				8DA2CE0D1DEF488200C6DB1C /* CmsDemo-Bridging-Header.h */,
+				38EFA72ACE8469C0C5395D1D /* Fx */,
 			);
 			path = CmsDemo;
 			sourceTree = "<group>";
@@ -531,6 +561,7 @@
 				8DE8B66C1DF1E74100A2DD74 /* WelcomePageViewController.swift in Sources */,
 				8DE8B6721DF27C9D00A2DD74 /* FormattedTextBlockViewController.swift in Sources */,
 				8DE8B66E1DF1EB5D00A2DD74 /* WelcomeContainerViewController.swift in Sources */,
+				38EFA41B4DEA69E9DE1E7110 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,6 +570,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DC07F3F1DF35D090062BBAA /* AppDataManagerSpec.swift in Sources */,
+				38EFAF2783FFB1A3B274CC7C /* SerializationSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
