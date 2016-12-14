@@ -5,6 +5,7 @@
 
 import Foundation
 import ResearchKit
+import Unbox
 
 struct ConsentSectionDefinition {
     let title : String
@@ -18,4 +19,21 @@ struct ConsentSectionDefinition {
 struct ConsentDocumentDefinition {
     let title : String
     let sections : [ConsentSectionDefinition]
+}
+
+extension ConsentDocumentDefinition : Unboxable {
+    init(unboxer: Unboxer) throws {
+        self.title = try unboxer.unbox(key: "title")
+        self.sections = try unboxer.unbox(key: "sections")
+    }
+}
+
+extension ConsentSectionDefinition : Unboxable {
+    init(unboxer: Unboxer) throws {
+        self.title = try unboxer.unbox(key: "title")
+        self.type = .custom
+        self.summary = try unboxer.unbox(key: "summary")
+        self.learnMoreButtonTitle = try unboxer.unbox(key: "learnMoreButtonTitle")
+        self.htmlContent = try unboxer.unbox(key: "htmlContent")
+    }
 }

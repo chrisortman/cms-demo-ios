@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ResearchKit
 
 protocol WelcomePageViewControllerDelegate : class {
     func textForAboutApp(welcomePageViewController: WelcomePageViewController) -> String
@@ -14,22 +15,75 @@ protocol WelcomePageViewControllerDelegate : class {
     func welcomePageViewController(welcomePageViewController: WelcomePageViewController, didUpdatePageIndex index: Int)
 }
 
-class WelcomeContainerViewController: UIViewController, WelcomePageViewControllerDelegate {
+private extension ORKConsentSection {
+    convenience init(_ type: ORKConsentSectionType, title: String, summary: String) {
+        self.init(type: type)
+        self.title = title
+        self.summary = summary
+    }
+}
+
+struct ConsentProcess {
+
+    let doc = ORKConsentDocument()
+    let signature = ORKConsentSignature(
+            forPersonWithTitle: nil,
+            dateFormatString: nil,
+            identifier: "ConsentDocumentParticipantSignature"
+    )
+
+    func buildTask() -> ORKTask {
+
+        doc.title = "Study Review"
+        doc.sections = [
+                ORKConsentSection(.overview, title: "Overview", summary: "Read this please"),
+                ORKConsentSection(.dataGathering, title: "All your data will belong to us", summary: "It's not like you haven't already given it to facebook, who cares anyway")
+        ]
+
+
+        doc.addSignature(signature)
+
+        let informStep = ORKVisualConsentStep(identifier: "Onboarding.Consent.Document", document: doc)
+        let reviewStep = ORKConsentReviewStep(identifier: "Onboarding.Consent.Review", signature: signature, in: doc)
+        reviewStep.reasonForConsent = "So we may own your immortal soul"
+
+        let registrationStep = ORKRegistrationStep(
+                identifier: "Onboarding.Consent.Registration",
+                title: "Registration",
+                text: nil,
+                options: []
+        )
+
+        let task = ORKOrderedTask(identifier: "Onboarding.Consent", steps: [
+                informStep, reviewStep, registrationStep
+        ])
+
+        return task
+
+    }
+}
+
+struct ConsentResult {
+
+    let taskResult : ORKTaskResult
+    init(from: ORKTaskResult) {
+        self.taskResult = taskResult
+    }
+
+    var agreed : Bool {
+        return true
+    }
+
+    var accountValid : Bool {
+        return true
+    }
+}
+
+class WelcomeContainerViewController: UIViewController, WelcomePageViewControllerDelegate, ORKTaskViewControllerDelegate {
 
     @IBOutlet weak var pageControl: UIPageControl!
     
     var model : AppInformation! = AppInformation(aboutText: "Yo!")
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let pageController = segue.destination as? WelcomePageViewController {
@@ -48,6 +102,29 @@ class WelcomeContainerViewController: UIViewController, WelcomePageViewControlle
     
     func welcomePageViewController(welcomePageViewController: WelcomePageViewController, didUpdatePageIndex index: Int) {
         self.pageControl.currentPage = index
+    }
+
+    @IBAction func joinStudyClicked(_ sender: Any) {
+        let process = ConsentProcess()
+        let taskController = ORKTaskViewController(task: process.buildTask(), taskRun: nil)
+        taskController.delegate = self
+        self.present(taskController, animated: true, completion: nil)
+    }
+    
+    func taskViewController(_ taskViewController: ORKTaskViewController, didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
+
+        switch reason {
+            case .completed:
+
+                let result = ConsentResult(from: taskViewController.result)
+                if result.agreed && result.accountValid {
+                    //enroll user on the server
+                }
+
+            default:
+                self.dismiss(animated: true, completion: nil)
+
+        }
     }
     
     /*

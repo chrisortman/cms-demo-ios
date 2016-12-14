@@ -38,12 +38,6 @@ class WelcomePageViewController: UIPageViewController, UIPageViewControllerDataS
         }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         if viewController === aboutStudyPage {
             return aboutAppPage

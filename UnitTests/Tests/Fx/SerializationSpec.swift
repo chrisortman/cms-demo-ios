@@ -3,33 +3,40 @@
 // Copyright (c) 2016 chrisortman. All rights reserved.
 //
 
-import Quick
+import XCTest
 import Nimble
 import Wrap
+import ResearchKit
+import Unbox
+
 @testable import CmsDemo
 
 private extension ConsentSectionDefinition {
-    convenience init(titledForTest: String) {
-        return ConsentSectionDefinition(title: titledForTest,
-                htmlContent: "<p></p>",
-                learnMoreButtonTitle: "Learn More",
-                summary: "Summary")
+    init(titledForTest: String) {
+         self.init(title: titledForTest,
+                   type: .custom,
+                   summary: "Summary",
+                   learnMoreButtonTitle: "Learn More",
+                   htmlContent: "<p></p>"
+                
+                )
     }
 }
 
-class SerializationSpec : QuickSpec {
-    override func spec() {
-        describe("Converting consent doc to / from JSON") {
-            it("works") {
-                let doc = ConsentDocumentDefinition(title: "Test Doc", sections: [
-                    ConsentSectionDefinition(titledForTest: "Section 1")
-                ])
+class SerializationSpec : XCTestCase {
 
-                let json = wrap(doc)
-                let deserialized : ConsentDocumentDefinition = unbox(data: json)
-                expect(deserialized.title).to(eq("Test Doc"))
-                expect(deserialized.sections.count).to(eq(1))
-            }
-        }
+    func testConsentDocumentSerialization() {
+
+        let doc = ConsentDocumentDefinition(title: "Test Doc", sections: [
+                ConsentSectionDefinition(titledForTest: "Section 1"),
+                ConsentSectionDefinition(titledForTest: "Section 2"),
+        ])
+
+        let json : [String : Any] = try! wrap(doc)
+        
+        let deserialized : ConsentDocumentDefinition = try! unbox(dictionary: json)
+        expect(deserialized.title).to(equal("Test Doc"))
+        expect(deserialized.sections.count).to(equal(2))
     }
+
 }
