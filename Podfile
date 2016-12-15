@@ -13,6 +13,7 @@ target 'CmsDemo' do
   pod "Unbox"
   pod "Wrap"
   pod "SteviaLayout"
+  pod "Alamofire"
 
   target "UnitTests" do
     inherit! :search_paths

@@ -8,6 +8,9 @@
 
 import UIKit
 import ResearchKit
+import Alamofire
+import PKHUD
+import Wrap
 
 protocol WelcomePageViewControllerDelegate : class {
     func textForAboutApp(welcomePageViewController: WelcomePageViewController) -> String
@@ -65,18 +68,14 @@ struct ConsentProcess {
 
 struct ConsentResult {
 
-    let taskResult : ORKTaskResult
-    init(from: ORKTaskResult) {
-        self.taskResult = taskResult
+    let agreed : Bool
+    let accountValid : Bool
+
+    init(from taskResult: ORKTaskResult) {
+        self.agreed = true
+        self.accountValid = true
     }
 
-    var agreed : Bool {
-        return true
-    }
-
-    var accountValid : Bool {
-        return true
-    }
 }
 
 class WelcomeContainerViewController: UIViewController, WelcomePageViewControllerDelegate, ORKTaskViewControllerDelegate {
@@ -119,6 +118,23 @@ class WelcomeContainerViewController: UIViewController, WelcomePageViewControlle
                 let result = ConsentResult(from: taskViewController.result)
                 if result.agreed && result.accountValid {
                     //enroll user on the server
+                    HUD.show(.labeledProgress(title: "Enrolling in study...", subtitle: nil))
+                    
+                    let params : [String : Any] = try! wrap(result)
+
+                    Alamofire.request(
+                            "http://localhost:4000",
+                            method: HTTPMethod.post,
+                            parameters: params,
+                            encoding: JSONEncoding.default,
+                            headers: nil).responseJSON { response in
+                                switch response.result {
+                                    case .success:
+                                        HUD.flash(.labeledSuccess(title: "Yay!", subtitle: nil))
+                                    case .failure:
+                                        HUD.flash(.labeledError(title: "Boo :(", subtitle: nil))
+                                }
+                            }
                 }
 
             default:
